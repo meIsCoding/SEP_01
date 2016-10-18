@@ -36,7 +36,7 @@ public class Histogramm {
 		for (int n = 0; n < maxX; n++){
 			lines[maxY+1] += " ";
 		}
-		lines[maxY+1] += "Punkt";
+		lines[maxY+1] += "  Punkt";
 		printLines(lines);
 		return lines;
 	}
@@ -64,8 +64,8 @@ public class Histogramm {
 				squareSize   = size;
 				squareWidth = size/height;
 				squareHeight = height;
-				if (widthR==0){squarePos = i;}
-				else{squarePos = i + widthR;}
+				squarePos = i;
+				if (widthR!=0){squarePos += widthR;}
 			}
 		}
 		for (int l = 0; l < (lines.length - 2); l++){
